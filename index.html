@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>listview demo</title>
+  <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css">
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+  <script>
+      $(document).on('pagechange', function() {
+        
+          
+        var url = window.location.search;
+        if(url !="" ){
+            console.log(url);    
+            var index = url.substr(1);
+            var imgsrc = "http://107.22.160.25/apps/cams/camera.php?id="+index;    
+            $("#image").attr("src", imgsrc);       
+        }
+      });                 
+        
+    </script>
+    
+    <style>
+    
+        
+        
+    </style>
+</head>
+<body>
+ 
+<div data-role="page" id="page1">
+  <div data-role="header">
+    <h1>Toronto Traffic Cams</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <ul data-role="listview">
+      <li><a href="dvp.html">DVP</a></li>
+      <li><a href="ls.html">Lakeshore</a></li>
+      <li><a href="gr.html">Gardiner</a></li>
+      <li><a href="al.html">Allen Rd.</a></li>        
+    </ul>
+  </div>
+<div>
+ 
+</body>
+</html>
